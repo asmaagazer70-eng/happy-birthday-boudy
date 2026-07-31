@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Great+Vibes&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+
+background:#060b1d;
+overflow:hidden;
+color:white;
+
+}
+
+/* النجوم */
+
+.stars{
+
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+
+background-image:
+radial-gradient(white 1px,transparent 1px);
+
+background-size:50px 50px;
+
+opacity:.35;
+
+z-index:-1;
+
+animation:moveStars 60s linear infinite;
+
+}
+
+@keyframes moveStars{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-1000px);
+
+}
+
+}
+
+/* الصفحات */
+
+.page{
+
+display:none;
+
+width:100%;
+height:100vh;
+
+padding:40px;
+
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+text-align:center;
+
+animation:fade .8s;
+
+}
+
+.page.active{
+
+display:flex;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* الظرف */
+
+.envelope{
+
+width:380px;
+
+padding:40px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+box-shadow:0 0 35px rgba(255,94,158,.35);
+
+}
+
+.heart{
+
+font-size:80px;
+
+animation:heartBeat 1s infinite;
+
+}
+
+@keyframes heartBeat{
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+}
+
+.envelope h1{
+
+font-size:50px;
+
+font-family:'Great Vibes',cursive;
+
+color:#ff79b0;
+
+margin:20px 0;
+
+}
+
+.envelope p{
+
+font-size:20px;
+
+margin-bottom:30px;
+
+}
+
+button{
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff5e9e;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 20px #ff5e9e;
+
+}
+
+/* الصفحة الثانية */
+
+.title{
+
+font-size:60px;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffc4dd;
+
+}
+
+#page2 h1{
+
+font-size:75px;
+
+color:#ff5e9e;
+
+margin:20px 0;
+
+}
+
+#typing{
+
+font-size:24px;
+
+max-width:800px;
+
+line-height:2;
+
+margin:30px 0;
+
+}
+
+/* الصفحة الثالثة */
+
+#page3 h1{
+
+font-size:60px;
+
+color:#ff5e9e;
+
+margin-bottom:20px;
+
+}
+
+#page3 p{
+
+font-size:24px;
+
+line-height:2;
+
+margin-bottom:30px;
+
+}
+
+.counter{
+
+padding:25px;
+
+width:250px;
+
+border:2px solid #ff5e9e;
+
+border-radius:20px;
+
+margin-bottom:40px;
+
+}
+
+.counter span{
+
+font-size:60px;
+
+display:block;
+
+color:#ff5e9e;
+
+font-weight:bold;
+
+}
+/* ===========================
+Gallery
+=========================== */
+
+#page4 h1{
+
+font-size:55px;
+
+color:#ff5e9e;
+
+margin-bottom:40px;
+
+}
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(2,280px);
+
+gap:25px;
+
+}
+
+.gallery img{
+
+width:280px;
+
+height:360px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+cursor:pointer;
+
+transition:.5s;
+
+box-shadow:0 0 20px rgba(255,94,158,.35);
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05) rotate(2deg);
+
+box-shadow:0 0 35px #ff5e9e;
+
+}
+
+/* ===========================
+Music
+=========================== */
+
+#page5 h1{
+
+font-size:55px;
+
+color:#ff5e9e;
+
+margin-bottom:25px;
+
+}
+
+#page5 h2{
+
+margin-top:30px;
+
+font-size:30px;
+
+color:#ffd6e7;
+
+}
+
+audio{
+
+width:450px;
+
+max-width:95%;
+
+}
+
+/* ===========================
+Quiz
+=========================== */
+
+#quiz{
+
+width:700px;
+
+max-width:95%;
+
+margin:30px auto;
+
+}
+
+.question{
+
+background:#141d37;
+
+padding:20px;
+
+border-radius:20px;
+
+margin-bottom:25px;
+
+}
+
+.question h3{
+
+margin-bottom:20px;
+
+}
+
+.answer{
+
+display:block;
+
+width:100%;
+
+margin:10px 0;
+
+padding:15px;
+
+background:#222c4d;
+
+border:none;
+
+border-radius:12px;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+.answer:hover{
+
+background:#ff5e9e;
+
+}
+
+/* ===========================
+Cake
+=========================== */
+
+#cake{
+
+position:relative;
+
+width:340px;
+
+height:180px;
+
+margin:40px auto;
+
+background:linear-gradient(#ff93bf,#ff5e9e);
+
+border-radius:20px;
+
+box-shadow:0 0 35px rgba(255,94,158,.5);
+
+}
+
+.candle{
+
+position:absolute;
+
+bottom:180px;
+
+width:8px;
+
+height:35px;
+
+background:white;
+
+border-radius:5px;
+
+}
+
+.candle::after{
+
+content:"";
+
+position:absolute;
+
+top:-12px;
+
+left:1px;
+
+width:6px;
+
+height:12px;
+
+background:orange;
+
+border-radius:50%;
+
+box-shadow:0 0 10px orange;
+
+}
+
+/* ===========================
+Last Page
+=========================== */
+
+#page8 h1{
+
+font-size:65px;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffd4e4;
+
+}
+
+#page8 h2{
+
+font-size:55px;
+
+color:#ff5e9e;
+
+margin:20px 0;
+
+}
+
+#page8 p{
+
+font-size:24px;
+
+max-width:800px;
+
+line-height:2;
+
+margin-bottom:35px;
+
+}
+
+#finish{
+
+background:#ff5e9e;
+
+padding:18px 45px;
+
+font-size:22px;
+
+}
+
+#finish:hover{
+
+box-shadow:0 0 35px #ff5e9e;
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery img{
+
+width:90%;
+
+height:320px;
+
+margin:auto;
+
+}
+
+.title{
+
+font-size:45px;
+
+}
+
+#page2 h1{
+
+font-size:50px;
+
+}
+
+#page3 h1{
+
+font-size:45px;
+
+}
+
+.counter{
+
+width:220px;
+
+}
+
+.counter span{
+
+font-size:45px;
+
+}
+
+.envelope{
+
+width:90%;
+
+}
+
+button{
+
+font-size:18px;
+
+padding:14px 30px;
+
+}
+
+}
+.answer.selected{
+    background:#ff5e9e;
+    color:white;
+    box-shadow:0 0 15px #ff5e9e;
+}
